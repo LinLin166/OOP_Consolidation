@@ -1,7 +1,7 @@
 // employee.ts
 abstract class Employee {
   // Protected properties for employee's name, age, and salary.
-  protected name: string;
+  public name: string;
   protected age: number;
   protected salary: number;
 

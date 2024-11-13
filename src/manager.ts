@@ -3,16 +3,16 @@
 import Employee from "./employee";
 
 class Manager extends Employee {
-  private department: string;
+  private _department: string;
 
   constructor(name: string, age: number, salary: number, department: string) {
     super(name, age, salary); // Inherit from Employee class
-    this.department = department;
+    this._department = department;
   }
 
   // Polymorphism: Overriding the abstract work() method from Employee class.
   work(): void {
-    console.log(`${this.name} is managing the ${this.department} department.`);
+    console.log(`${this.name} is managing the ${this._department} department.`);
   }
 
   getDepartment(): string;
@@ -21,9 +21,9 @@ class Manager extends Employee {
   getDepartment(includeDetails: boolean): string;
   getDepartment(includeDetails?: boolean): string {
     if (includeDetails) {
-      return `${this.name} is managing the ${this.department} department with a salary of $${this.salary}.`;
+      return `${this.name} is managing the ${this._department} department with a salary of $${this.salary}.`;
     } else {
-      return this.department;
+      return this._department;
     }
   }
 }

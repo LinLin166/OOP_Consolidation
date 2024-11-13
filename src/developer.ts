@@ -3,7 +3,7 @@ import Employee from "./employee";
 
 class Developer extends Employee {
   //Encapsulation: Declare private property for programming language name
-  private programmingLanguage: string;
+  private _programmingLanguage: string;
 
   constructor(
     name: string,
@@ -12,16 +12,16 @@ class Developer extends Employee {
     programmingLanguage: string
   ) {
     super(name, age, salary); //Inherit from Employee
-    this.programmingLanguage = programmingLanguage;
+    this._programmingLanguage = programmingLanguage;
   }
 
   // Polymorphism: Overriding the abstract work() method from Employee class.
   work(): void {
-    console.log(`${this.name} is coding in ${this.programmingLanguage}.`);
+    console.log(`${this.name} is coding in ${this._programmingLanguage}.`);
   }
 
   getProgrammingLanguage(): string {
-    return this.programmingLanguage;
+    return this._programmingLanguage;
   }
 }
 
