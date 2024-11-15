@@ -3,9 +3,14 @@
 ## Project Structure
 
 - **`src/`**:
-  - `employee.ts`
-  - `manager.ts`
-  - `developer.ts`
+  - `employee/`
+    - `employee.ts`
+    - `manager.ts`
+    - `developer.ts`
+  - `animal/`
+    - `animal.ts`
+    - `cat.ts`
+    - `dog.ts`
   - `main.ts` – The main file to test the functionality of the classes.
 - **`tsconfig.json`**
 
